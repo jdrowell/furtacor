@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 %html
   %head
+    %meta{ :content => 'text/html;charset=UTF-8', :'http-equiv' => 'content-type' }
+
     %title== Furtacor code colorizer feat. CodeRay
     %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', :type => 'text/javascript' }
     %script{ :src => '/main.js', :type => 'text/javascript' }
@@ -33,7 +35,7 @@
           %option== Plaintext
           %option== Python
           %option== RHTML
-          %option{ :selected => 1 }== Ruby
+          %option{ :selected => 'selected' }== Ruby
           %option== SQL
           %option== Scanner
           %option== Scheme          

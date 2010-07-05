@@ -1,0 +1,13 @@
+Colorize your code for posting to blogs. Uses the CodeRay gem for the heavy lifting.
+Simple but effective layout, just paste your original code and click on the Colorize
+tab to see the result. Use the HTML tab to copy the HTML source.
+
+Sinatra-based, run it with e.g. Thin:
+
+  rackup -s thin furtacor.ru
+
+
+Copyright 2010 John D. Rowell <me@jdrowell.com>
+License: MIT
+
+

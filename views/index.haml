@@ -1,0 +1,27 @@
+%html
+  %head
+    %title== Furtacor code colorizer feat. CodeRay
+    %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' }
+    %script{ :src => '/main.js' }
+    %link{ :rel => 'stylesheet', :href => '/style.css', :type => 'text/css' }
+
+  %body
+    %ul#tabs
+      %li
+        %a#code{ :href => '#'}== Code
+      %li
+        %a#colorized{ :href => '#'}== Colorized
+      %li
+        %a#html_src{ :href => '#'}== HTML
+    .page.original_code
+      %form{ :action => '/coderay', :method => 'post' }
+        %textarea
+        %select#lang
+          %option== Ruby
+          %option== Javascript
+    .page.colorized_code
+    .page.html_source
+      %form
+        %textarea
+
+

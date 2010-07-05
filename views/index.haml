@@ -9,42 +9,46 @@
     %link{ :rel => 'stylesheet', :href => '/style.css', :type => 'text/css' }
 
   %body
-    %ul#tabs
-      %li
-        %a#code.selected{ :href => '#'}== Code
-      %li
-        %a#colorized{ :href => '#'}== Colorized
-      %li
-        %a#html_src{ :href => '#'}== HTML
-    .page.original_code
-      %form{ :action => '/coderay', :method => 'post' }
-        %textarea
-        %select#lang
-          %option== C
-          %option{ :value => 'CPlusPlus' }== C++
-          %option== CSS
-          %option== Delphi
-          %option== Diff
-          %option== Groovy
-          %option== HTML
-          %option== Java
-          %option== Javascript
-          %option== JSON
-          %option== NitroXHTML
-          %option== PHP
-          %option== Plaintext
-          %option== Python
-          %option== RHTML
-          %option{ :selected => 'selected' }== Ruby
-          %option== SQL
-          %option== Scanner
-          %option== Scheme          
-          %option== XML
-          %option== YAML
-    .page.colorized_code
-    .page.html_source
-      %form
-        %textarea
+    %h3
+      Paste your code, select a language below and click on Colorized.
+    #tabs
+      %ul
+        %li
+          %a#code.selected{ :href => '#'}== Code
+        %li
+          %a#colorized{ :href => '#'}== Colorized
+        %li
+          %a#html_src{ :href => '#'}== HTML
+    #pages_container
+      .page.original_code
+        %form{ :action => '/coderay', :method => 'post' }
+          %textarea
+          %select#lang
+            %option== C
+            %option{ :value => 'CPlusPlus' }== C++
+            %option== CSS
+            %option== Delphi
+            %option== Diff
+            %option== Groovy
+            %option== HTML
+            %option== Java
+            %option== Javascript
+            %option== JSON
+            %option== NitroXHTML
+            %option== PHP
+            %option== Plaintext
+            %option== Python
+            %option== RHTML
+            %option{ :selected => 'selected' }== Ruby
+            %option== SQL
+            %option== Scanner
+            %option== Scheme          
+            %option== XML
+            %option== YAML
+      .page.colorized_code
+      .page.html_source
+        %form
+          %textarea
     %footer
-      Get the source code on <a href="http://github.com/jdrowell/furtacor">Github</a>
+      Get the source code on <a href="http://github.com/jdrowell/furtacor">Github</a>. Uses <a href="http://www.sinatrarb.com/">Sinatra</a>, <a href="http://jquery.com/">jQuery</a> and <a href="http://coderay.rubychan.de/">CodeRay</a>. &copy; 2010 EYB Serviços de Internet.
 

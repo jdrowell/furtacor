@@ -1,8 +1,9 @@
+<!DOCTYPE HTML>
 %html
   %head
     %title== Furtacor code colorizer feat. CodeRay
-    %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' }
-    %script{ :src => '/main.js' }
+    %script{ :src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js', :type => 'text/javascript' }
+    %script{ :src => '/main.js', :type => 'text/javascript' }
     %link{ :rel => 'stylesheet', :href => '/style.css', :type => 'text/css' }
 
   %body
@@ -17,11 +18,31 @@
       %form{ :action => '/coderay', :method => 'post' }
         %textarea
         %select#lang
-          %option== Ruby
+          %option== C
+          %option{ :value => 'CPlusPlus' }== C++
+          %option== CSS
+          %option== Delphi
+          %option== Diff
+          %option== Groovy
+          %option== HTML
+          %option== Java
           %option== Javascript
+          %option== JSON
+          %option== NitroXHTML
+          %option== PHP
+          %option== Plaintext
+          %option== Python
+          %option== RHTML
+          %option{ :selected => 1 }== Ruby
+          %option== SQL
+          %option== Scanner
+          %option== Scheme          
+          %option== XML
+          %option== YAML
     .page.colorized_code
     .page.html_source
       %form
         %textarea
-
+    %footer
+      Get the source code on <a href="http://github.com/jdrowell/furtacor">Github</a>
 

@@ -38,13 +38,18 @@ ul#tabs {
 }
 
 .original_code textarea {
-  width: 800px;
-  height: 560px;
+  width: 794px;
+  height: 566px;
 }
 
 .html_source textarea {
   width: 800px;
   height: 600px;
+}
+
+footer {
+  position: absolute;
+  margin-top: 650px;
 }
 
 // CODERAY

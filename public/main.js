@@ -1,4 +1,6 @@
-function show_page(page) {
+function show_page(tab, page) {
+  $('#tabs a').removeClass('selected');
+  $(tab).addClass('selected');
   page.css({ display: 'block' });
   page.siblings('.page').css({ display: 'none' });
   return false;
@@ -12,10 +14,10 @@ $(function() {
     $('.original_code textarea').addClass('changed');
   });
   $('#code').click(function() {
-    return show_page($('.page.original_code'));
+    return show_page(this, $('.page.original_code'));
   });
   $('#colorized').click(function() {
-    show_page($('.page.colorized_code'));
+    show_page(this, $('.page.colorized_code'));
     if ($('.original_code textarea').hasClass('changed')) {
       $.post($('form').attr('action'), { code: $('.original_code textarea')[0].value, lang: $('#lang')[0].value }, function(data) {
         $('.colorized_code').html(data);
@@ -26,7 +28,7 @@ $(function() {
     return false;
   });
   $('#html_src').click(function() {
-    return show_page($('.page.html_source'));
+    return show_page(this, $('.page.html_source'));
   });
 });
 

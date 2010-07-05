@@ -13,9 +13,15 @@ ul#tabs {
   text-align: center;
   text-decoration: none;
   font-family: Arial, Helvetica;
+  color: #000;
   height: 1.2em;
   border: 1px solid #666;
   padding: 0.2em 0.4em;
+}
+
+#tabs li a.selected {
+  background: #999;
+  color: #fff
 }
 
 .page {
@@ -37,14 +43,9 @@ ul#tabs {
   display: none;
 }
 
-.original_code textarea {
+.original_code textarea, .html_source textarea {
   width: 794px;
   height: 566px;
-}
-
-.html_source textarea {
-  width: 800px;
-  height: 600px;
 }
 
 footer {
